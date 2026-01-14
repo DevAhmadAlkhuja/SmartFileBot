@@ -2,10 +2,10 @@ import telebot
 import sqlite3
 import threading
 from flask import Flask, request
-
+import os
 # --- 1. إعدادات البوت ---
 # استبدل النص التالي بالتوكين الذي حصلت عليه من BotFather
-API_TOKEN = 'YOUR_BOT_TOKEN_HERE' 
+API_TOKEN = os.getenv('BOT_TOKEN')
 
 bot = telebot.TeleBot(API_TOKEN)
 app = Flask(__name__)
@@ -108,4 +108,5 @@ if __name__ == '__main__':
     
     # تشغيل البوت
     print("Bot is running...")
+
     bot.infinity_polling()
