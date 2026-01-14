@@ -28,7 +28,7 @@ def home():
     return "I am alive! Bot is running."
 
 def run_web_server():
-    app.run(host='0.0.0.0', port=8080)
+    app.run(host='0.0.0.0', port=8000)
 
 # --- 4. منطق البوت الذكي ---
 
@@ -110,3 +110,4 @@ if __name__ == '__main__':
     print("Bot is running...")
 
     bot.infinity_polling()
+
